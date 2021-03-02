@@ -12,6 +12,7 @@ import { ChallengesProvider } from "../contexts/ChallengesContext";
 
 import styles from "../styles/pages/Home.module.css"
 import { SideBar } from '../components/SideBar'
+import { Layout } from '../components/Layout'
 
 interface HomeProps {
   level: number,
@@ -27,7 +28,7 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-      <SideBar />
+      <Layout>
       <div className={styles.container}>    
         <Head>
           <title>Início | se.mova</title>
@@ -47,6 +48,7 @@ export default function Home(props: HomeProps) {
           </section>
         </CountdownProvider>
       </div>
+      </Layout>
     </ChallengesProvider>
   )
 }

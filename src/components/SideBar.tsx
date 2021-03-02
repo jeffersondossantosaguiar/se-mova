@@ -1,24 +1,25 @@
 import Link from 'next/link'
 import styles from '../styles/components/SideBar.module.css'
 import {FiHome, FiAward} from 'react-icons/fi'
+import { useRouter } from 'next/router'
 
 export function SideBar() {
+  const router = useRouter()
+  console.log(router.pathname)
   return (
     <div className={styles.sideBarContainer}>
       <img src="icons/logo.svg" alt="Logo"/>
       <div className={styles.menuContainer}>
-        <ul>
-          <li>
             <Link href="/">
-              <FiHome className={styles.sideBarMenuIcons}/>
+              <div className={`${router.pathname === "/" ? styles.active : ""}`}>
+                  <FiHome className={styles.sideBarMenuIcons}/>
+              </div>
             </Link>
-          </li>
-          <li>
             <Link href="/learderboard">
-              <FiAward className={styles.sideBarMenuIcons}/>
+              <div className={`${router.pathname === "/learderboard" ? styles.active : ""}`}>
+                <FiAward className={styles.sideBarMenuIcons}/>
+              </div>
             </Link>
-          </li>
-        </ul>
       </div>
     </div>
   )
