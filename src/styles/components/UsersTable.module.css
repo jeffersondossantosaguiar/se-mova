@@ -1,0 +1,92 @@
+.container {
+  margin-top: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse:separate; 
+  border-spacing: 0 0.5em;
+}
+
+.th {
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.th_user {
+  padding-left: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.tr_header {
+  height: 3rem;
+}
+
+.tr_data { 
+  height: 5rem;
+  background-color: var(--white);
+  color: var(--text)
+}
+
+.td_position {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  width: 4rem;
+
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  border-right: 0.2rem solid var(--background);
+}
+
+.td_user {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.avatar {
+  margin-top: 0.5rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.avatar_img {
+  margin-right: 0.5rem;
+}
+
+.name_level {
+  margin-left: 1rem;
+}
+
+.strong {
+  color: var(--title)
+}
+
+.p {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.td_challenges {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.td_exp {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.blue {
+  color: var(--blue);
+}
