@@ -7,6 +7,7 @@
   right: 0;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -16,7 +17,8 @@
   width: 100%;
   max-width: 400px;
   padding: 2rem 3rem;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   text-align: center;
   position: relative;
@@ -48,4 +50,49 @@
   background: transparent;
   border: 0;
   font-size: 0px;
+}
+
+.twitterButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--white);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 3rem;
+  border: 0;
+  border-top: 1px solid var(--gray-line);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+
+  transition: background-color 0.2s;
+}
+
+.twitterButton p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--blue-twitter);
+  margin-top: 0.25rem;
+  margin-right: 1rem;
+}
+
+.twitterIcon {
+  font-size: 1.8rem;
+  color: var(--blue-twitter);
+}
+
+.twitterButton:hover {
+  background: var(--blue-twitter);
+}
+
+.twitterButton:hover p {
+  color: var(--white)
+}
+
+.twitterButton:hover .twitterIcon {
+  color: var(--white)
 }
