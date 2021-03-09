@@ -1,11 +1,16 @@
-import { Head } from "next/document"
 import { SideBar } from './SideBar'
+import Head from 'next/head'
 
-export function Layout({children}) {
+export default function Layout({ children }) {
   return (
-    <div className="Layout">
+    <>
+      <Head>
+        <title>se.mova</title>
+      </Head>
       <SideBar />
-      <div className="Content">{children}</div>
-    </div>
+      <main>
+        <div className="Content">{children}</div>
+      </main>
+    </>
   )
 }

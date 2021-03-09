@@ -1,0 +1,34 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  
+  background: var(--blue)
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: center;
+  width: 100%;
+  max-width: 50%;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 50%;
+}
+
+.content h1 {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.content p {
+  color: var(--text-highlight);
+  font-weight: 500;
+  font-size: 1.2rem;
+}

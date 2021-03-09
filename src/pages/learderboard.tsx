@@ -1,6 +1,6 @@
 import styles from '../styles/pages/Learderboard.module.css'
 
-import { Layout } from "../components/Layout"
+import Layout from "../components/Layout"
 import { UsersTable } from '../components/UsersTable'
 
 export default function Learderboard() {
