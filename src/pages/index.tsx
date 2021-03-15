@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/client'
 
 import Layout from '../components/Layout'
 import Login from './api/auth/login'

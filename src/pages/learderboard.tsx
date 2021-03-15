@@ -8,7 +8,7 @@ import Layout from "../components/Layout"
 import { UsersTable } from '../components/UsersTable'
 
 export default function Learderboard() {
-  const [session, loading] = useSession()
+  const [session] = useSession()
 
   if (!session) {
     return (
