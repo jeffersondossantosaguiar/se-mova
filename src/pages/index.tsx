@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next'
 import { signIn, signOut, useSession } from 'next-auth/client'
 
 import Layout from '../components/Layout'
-import Login from './login'
+import Login from './api/auth/login'
 import { CompletedChallenges } from "../components/CompletedChallenges"
 import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
@@ -23,12 +23,14 @@ interface HomeProps {
 
 
 export default function Home(props: HomeProps) {
-  /* const [session, loading] = useSession() */
-  const session = false
+  const [session, loading] = useSession()
 
   return (
     <>
-      {session ? (
+      {!session && <>
+        <Login />
+      </>}
+      {session && <>
         <Layout>
           <ChallengesProvider
             level={props.level}
@@ -53,9 +55,7 @@ export default function Home(props: HomeProps) {
             </div>
           </ChallengesProvider>
         </Layout>
-      ) : (
-        <Login />
-      )}
+      </>}
     </>
   )
 }

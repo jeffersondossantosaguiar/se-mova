@@ -1,7 +1,8 @@
 import Head from 'next/head'
+import { signIn } from 'next-auth/client'
 import { FaGithub } from 'react-icons/fa'
 
-import styles from '../styles/pages/Login.module.css'
+import styles from '../../../styles/pages/Login.module.css'
 
 export default function Login() {
   return (
@@ -23,10 +24,9 @@ export default function Login() {
           <button
             type="button"
             className={styles.gitAuthButton}
-          >
+            onClick={() => signIn()}>
             <FaGithub className={styles.gitIconButton} />
-            Login com Github
-
+              Login com Github
           </button>
         </div>
       </div>

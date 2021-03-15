@@ -60,4 +60,30 @@
   margin-left: -5px;
 }
 
+.logOutButton {
+  margin-bottom: 2rem;
+  
+  width: 100%;
+  height: 5rem;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: var(--white);
+  color: var(--blue);
+
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  transition: color 0.2s;
+}
+
+.logOutButton:hover {
+  color: var(--text);
+}
 
