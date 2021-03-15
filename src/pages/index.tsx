@@ -23,7 +23,11 @@ interface HomeProps {
 
 
 export default function Home(props: HomeProps) {
-  const [session] = useSession()
+  const [session, loading] = useSession()
+
+  if (loading) {
+    <p>carregando</p>
+  }
 
   return (
     <>

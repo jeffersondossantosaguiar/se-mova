@@ -24,7 +24,7 @@ export function SideBar() {
         </Link>
 
       </div>
-      <button className={styles.logOutButton} onClick={() => signOut()}>Sair</button>
+      <button className={styles.logOutButton} onClick={() => signOut({ callbackUrl: '/login' })}>Sair</button>
     </div>
   )
 }
