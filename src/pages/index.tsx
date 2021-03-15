@@ -27,9 +27,10 @@ export default function Home(props: HomeProps) {
 
   return (
     <>
-      {!session && <>
-        <Login />
-      </>}
+      {!session &&
+        <>
+          <Login />
+        </>}
       {session && <>
         <Layout>
           <ChallengesProvider

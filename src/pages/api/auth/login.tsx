@@ -18,13 +18,13 @@ export default function Login() {
         <div className={styles.gitContainer}>
           <h1>Bem-vindo</h1>
           <div className={styles.gitDescription}>
-            {/* <FaGithub className={styles.gitIcon} /> */}
+            <FaGithub className={styles.gitIcon} />
             <p>Faça login para começar</p>
           </div>
           <button
             type="button"
             className={styles.gitAuthButton}
-            onClick={() => signIn()}>
+            onClick={() => signIn('github')}>
             <FaGithub className={styles.gitIconButton} />
               Login com Github
           </button>
