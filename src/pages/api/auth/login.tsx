@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { signIn } from 'next-auth/client'
+import { signIn, useSession } from 'next-auth/client'
 import { FaGithub } from 'react-icons/fa'
 
 import styles from '../../../styles/pages/Login.module.css'
